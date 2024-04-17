@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testcase generator</title>
+    <style>
+        input[type="text"] {
+            width: 500px; /* Set the width of the text box */
+            height: 55px;
+            padding: 10px; /* Add padding inside the text box */
+            border: 2px solid #161516; /* Add a border with a color */
+            border-radius: 25px; /* Add rounded corners */
+            box-sizing: border-box; /* Include padding and border in the total width */ 
+            font-size: 20px; /* Set the font size */
+            color: #050405; /* Set the text color */
+            background-color: #cee7df;
+            text-align: center;
+            
+        }
+        input[type="text"] ::placeholder{ color:#f5f3f7}
+
+        /* Apply styles to the submit button */
+        .submit {
+            color: #0f0f0f; /* Default color for labels */
+            width: 200px;
+            margin: 0 auto; /* Center the box horizontally */
+            border: 5px solid #cee7df; /* Border around specific text */
+            padding: 10px; /* Padding to give space inside the border */
+            text-align: center;
+            border-radius: 10px; /* Rounded corners for the border */
+            font-size: 25px;
+            color: rgb(15, 14, 14); /* Text color inside the border */
+            background-color: #cee7df;
+            font-weight: 600;
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+        }
+        body {
+            text-align: center;
+            background-color: #cee7df;
+
+        }
+        form {
+            text-align: center; /* Align form elements to the left */
+            width: 1500px; /* Set a width for the form */
+            height: 900px;
+            margin: 20px auto; /* Center the form horizontally */
+            border: 2px solid #141313;
+            background-color: #cee7df;
+        }
+        .bordered-text {
+        width: 1000px;
+        margin: 0 auto; /* Center the box horizontally */
+        border: 5px solid #cee7df; /* Border around specific text */
+        padding: 35px; /* Padding to give space inside the border */
+        text-align: center;
+        border-radius: 50px; /* Rounded corners for the border */
+        font-size: 59px;
+        color: rgb(19, 18, 18); /* Text color inside the border */
+        background-color: #cee7df;
+        }
+        .sub-text {
+        width: 350px;
+        margin: 0 auto; /* Center the box horizontally */
+        border: 5px solid #cee7df; /* Border around specific text */
+        padding: 20px; /* Padding to give space inside the border */
+        text-align: center;
+        border-radius: 50px; /* Rounded corners for the border */
+        font-size:40px;
+        color: rgb(27, 25, 25); /* Text color inside the border */
+        background-color: #cee7df;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <form action="/chat" method="post">
+        <br><br>
+        <h1 class="bordered-text">Post your API details</h1><br><br>
+        <h2 class="sub-text">Query</h2><br><br><br>
+        <input type="text" id="textbox" name="query" placeholder="Enter the Query here"><br><br><br><br>
+        <br><br><br>
+        <button class="submit";type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+API Details:Base URL: https://api.publicapis.io/blog/currency-conversion-tool-with-fixer-real-time-apiEndpoint: /convert Method: GETParameters:base (required): The base currency to convert from.target (required): The target currency to convert to.amount (optional): The amount of base currency to convert. If not provided, default value is assumed.Headers: None Expected Behavior:Response Status Code 200 (OK) Response payload includes the converted currency amount.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.example.com/currency-conversionEndpoint: /convertMethod: POSTParameters:base_currency (required): The base currency code to convert from. target_currency (required): The target currency code to convert to.amount (optional): The amount of base currency to convert. If not provided, default value is assumed.Headers:Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the converted currency amount.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/geo-location-api-proxy-with-express-nodejs-and-ipstackEndpoint: /geo-locationMethod: GETParameters:ip (required): The IP address for which to retrieve geolocation information. access_key (required): Access key for authentication with the IPStack service.Headers: None Expected Behavior:Response Status Code 200 (OK) Response payload includes geolocation information for the specified IP address.Generate postman testcases for the given test conditions as a code.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/ip-geolocation-apisEndpoint: /geolocationMethod: GETParameters:ip_address (required): The IP address to lookup for geolocation information.api_key (optional): API key for authentication, if applicable.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address, including country, region, city, latitude, and longitude.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.example.com/geo-locationEndpoint: /get-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/travel-experiences-with-rest-api Endpoint: /experiencesMethod: GET Parameters:location (required): The location for which to retrieve travel experiences. limit (optional): The maximum number of experiences to retrieve (default is assumed if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes travel experiences for the specified location.Generate postman testcases for the given test conditions as a code.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.example.com/travel-experiencesEndpoint: /getExperiencesMethod: GETParameters:destination (required): The destination for which to retrieve travel experiences.category (optional): The category of experiences to filter (e.g., food, adventure, culture).max_price (optional): The maximum price range for experiences.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes travel experiences for the specified destination.Generate postman testcases for the given test conditions as a code.
+
+
+API Details: - Base URL: https://api.openweathermap.org/data/2.5/ Endpoint 1:- Path: /weather - Method: GET - Parameters:   - delhi   - API key - Headers: None - Expected Behavior:   - Response Status Code 200 (OK)   - Response payload includes current weather information for the specified city. Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/noun-project-apiEndpoint: /iconsMethod: GETParameters:term (required): The search term for icons.apiKey (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes icon search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/dribble-apiEndpoint: /shotsMethod: GETParameters:query (optional): The search query for shots.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shots per page (default is 30 if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes shot search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/rijksmuseum-apiEndpoint: /collectionMethod: GETParameters:q (optional): The search query for artworks.key (required): API key for authentication.format (optional): The format of the response (default is JSON if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes collection search results from the Rijksmuseum.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/tv-maze-apiEndpoint: /showsMethod: GETParameters:q (optional): The search query for TV shows.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shows per page (default is 20 if not provided).Headers: NoneExpected Behavior:Responce Status Code 200 (OK)Response payload includes TV show search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers:Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/top-5-javascript-courses-to-learnEndpoint: /coursesMethod: GETParameters: NoneHeaders: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes information about the top 5 JavaScript courses to learn.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/api2convert-apiEndpoint: /convertMethod: POSTParameters:input_format (required): The input file format.output_format (required): The desired output file format.file (required): The input file to convert.Headers:Content-Type: multipart/form-dataExpected Behavior:Response Status Code 200 (OK)Response payload includes the converted file.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/ron-swanson-quoutes-apiEndpoint: /quotes/randomMethod: GETParameters: NoneHeaders: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes a random Ron Swanson quote.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/movie-db-apiEndpoint: /searchMethod: GETParameters:query (required): The search query for movies.api_key (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes movie search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers:Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/blog/top-5-javascript-courses-to-learnEndpoint: /coursesMethod: GETParameters: NoneHeaders: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes information about the top 5 JavaScript courses to learn.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/api2convert-apiEndpoint: /convertMethod: POSTParameters:input_format (required): The input file format.output_format (required): The desired output file format.file (required): The input file to convert.Headers:Content-Type: multipart/form-dataExpected Behavior:Response Status Code 200 (OK)Response payload includes the converted file.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/ron-swanson-quoutes-apiEndpoint: /quotes/randomMethod: GETParameters: NoneHeaders: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes a random Ron Swanson quote.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/movie-db-apiEndpoint: /searchMethod: GETParameters:query (required): The search query for movies.api_key (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes movie search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/noun-project-apiEndpoint: /iconsMethod: GETParameters:term (required): The search term for icons.apiKey (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes icon search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/dribble-apiEndpoint: /shotsMethod: GETParameters:query (optional): The search query for shots.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shots per page (default is 30 if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes shot search results.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/rijksmuseum-apiEndpoint: /collectionMethod: GETParameters:q (optional): The search query for artworks.key (required): API key for authentication.format (optional): The format of the response (default is JSON if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes collection search results from the Rijksmuseum.Generate postman testcases for the given test conditions as a code.
+
+
+API Details:Base URL: https://api.publicapis.io/tv-maze-apiEndpoint: /showsMethod: GETParameters:q (optional): The search query for TV shows.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shows per page (default is 20 if not provided).Headers: NoneExpected Behavior:Responce Status Code 200 (OK)Response payload includes TV show search results.Generate postman testcases for the given test conditions as a code.
+

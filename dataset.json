@@ -1,0 +1,404 @@
+[
+    {
+        "prompt": "API Details:\nBase URL: https://api.publicapis.io/blog/currency-conversion-tool-with-fixer-real-time-api\nEndpoint: /convert\nMethod: GET\nParameters:\nbase (required): The base currency to convert from.\ntarget (required): The target currency to convert to.\namount (optional): The amount of base currency to convert. If not provided, default value is assumed.\nHeaders: None\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes the converted currency amount.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+                
+                "content": "pm.test(\"Response payload includes converted currency amount\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.convertedAmount).to.exist;\n    pm.expect(jsonData.convertedAmount).to.be.a(\"number\");\n});"
+            }
+        ]
+    },
+    {
+        "prompt": "API Details:\nBase URL: https://api.example.com/currency-conversion\nEndpoint: /convert\nMethod: POST\nParameters:\nbase_currency (required): The base currency code to convert from.\ntarget_currency (required): The target currency code to convert to.\namount (optional): The amount of base currency to convert. If not provided, default value is assumed.\nHeaders:\nContent-Type: application/json\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes the converted currency amount.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+                
+                "content": "pm.test(\"Response payload includes converted currency amount\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData.convertedAmount).to.exist;\n    pm.expect(jsonData.convertedAmount).to.be.a(\"number\");\n});"
+            }
+        ]
+    },
+    {
+        "prompt": "API Details:\nBase URL: https://api.publicapis.io/blog/geo-location-api-proxy-with-express-nodejs-and-ipstack\nEndpoint: /geo-location\nMethod: GET\nParameters:\nip (required): The IP address for which to retrieve geolocation information.\naccess_key (required): Access key for authentication with the IPStack service.\nHeaders: None\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes geolocation information for the specified IP address.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+                
+                "content": "pm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"object\").that.is.not.empty;\n    pm.expect(jsonData).to.have.property(\"ip\").that.is.a(\"string\");\n    pm.expect(jsonData).to.have.property(\"city\").that.is.a(\"string\");\n    pm.expect(jsonData).to.have.property(\"country_code\").that.is.a(\"string\");\n});"
+            }
+        ]
+    },
+    {
+        "prompt": "API Details:\nBase URL: https://api.publicapis.io/blog/ip-geolocation-apis\nEndpoint: /geolocation\nMethod: GET\nParameters:\nip_address (required): The IP address to lookup for geolocation information.\napi_key (optional): API key for authentication, if applicable.\nHeaders: None\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes geolocation information for the specified IP address, including country, region, city, latitude, and longitude.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+                
+                "content": "pm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"object\").that.is.not.empty;\n    pm.expect(jsonData).to.have.property(\"country\").that.is.a(\"string\");\n    pm.expect(jsonData).to.have.property(\"region\").that.is.a(\"string\");\n    pm.expect(jsonData).to.have.property(\"city\").that.is.a(\"string\");\n    pm.expect(jsonData).to.have.property(\"latitude\").that.is.a(\"number\");\n    pm.expect(jsonData).to.have.property(\"longitude\").that.is.a(\"number\");\n});"
+            }
+        ]
+    },
+    {
+        "prompt": "API Details:\nBase URL: https://api.example.com/geo-location\nEndpoint: /get-location\nMethod: GET\nParameters:\nip_address (required): The IP address for which to retrieve geolocation information.\naccess_token (required): Access token for authentication with the geolocation service.\nHeaders: None\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes geolocation information for the specified IP address.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+               
+                "content": "    pm.expect(jsonData).to.have.property(\"latitude\").that.is.a(\"number\");\n    pm.expect(jsonData).to.have.property(\"longitude\").that.is.a(\"number\");\n});"
+            }
+        ]
+    },
+    {
+        "prompt": "API Details:\nBase URL: https://api.publicapis.io/blog/travel-experiences-with-rest-api\nEndpoint: /experiences\nMethod: GET\nParameters:\nlocation (required): The location for which to retrieve travel experiences.\nlimit (optional): The maximum number of experiences to retrieve (default is assumed if not provided).\nHeaders: None\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes travel experiences for the specified location.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+                
+                "content": "pm.test(\"Response payload includes travel experiences\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\n    jsonData.forEach(function(experience) {\n        pm.expect(experience).to.have.property(\"title\").that.is.a(\"string\");\n        pm.expect(experience).to.have.property(\"description\").that.is.a(\"string\");\n        pm.expect(experience).to.have.property(\"location\").that.is.a(\"string\");\n    });\n});"
+            }
+        ]
+    },
+    {
+        "prompt": "API Details:\nBase URL: https://api.example.com/travel-experiences\nEndpoint: /getExperiences\nMethod: GET\nParameters:\ndestination (required): The destination for which to retrieve travel experiences.\ncategory (optional): The category of experiences to filter (e.g., food, adventure, culture).\nmax_price (optional): The maximum price range for experiences.\nHeaders: None\nExpected Behavior:\nResponse Status Code 200 (OK)\nResponse payload includes travel experiences for the specified destination.\nGenerate postman testcases for the given test conditions as a code.",
+        "testcase": [
+            {
+                
+                "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+            },
+            {
+                
+                "content": "pm.test(\"Response payload includes travel experiences\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\n    jsonData.forEach(function(experience) {\n        pm.expect(experience).to.have.property(\"title\").that.is.a(\"string\");\n        pm.expect(experience).to.have.property(\"description\").that.is.a(\"string\");\n        pm.expect(experience).to.have.property(\"destination\").that.is.a(\"string\").and.is.equal(pm.variables.get(\"destination\"));\n    });\n});"
+            }
+        ]
+    },
+    
+        {
+            "prompt": "API Details: - Base URL: https://api.openweathermap.org/data/2.5/ Endpoint 1:- Path: /weather - Method: GET - Parameters:   - delhi   - API key - Headers: None - Expected Behavior:   - Response Status Code 200 (OK)   - Response payload includes current weather information for the specified city. Generate postman testcases for the given test conditions as a code.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+                },
+                {
+                    "content": "pm.test(\"Response payload includes current weather information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"object\").that.is.not.empty;\n    pm.expect(jsonData).to.have.property(\"coord\").that.is.an(\"object\").and.has.property(\"lat\").that.is.a(\"number\");\n    pm.expect(jsonData).to.have.property(\"coord\").that.is.an(\"object\").and.has.property(\"lon\").that.is.a(\"number\");\n    pm.expect(jsonData).to.have.property(\"weather\").that.is.an(\"array\").and.is.not.empty;\n    pm.expect(jsonData).to.have.property(\"main\").that.is.an(\"object\").and.has.property(\"temp\").that.is.a(\"number\");\n    pm.expect(jsonData).to.have.property(\"wind\").that.is.an(\"object\").and.has.property(\"speed\").that.is.a(\"number\");\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/noun-project-apiEndpoint: /iconsMethod: GETParameters:term (required): The search term for icons.apiKey (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes icon search results.Generate postman testcases for the given test conditions as a code.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+                },
+                {
+                    "content": "pm.test(\"Response payload includes icon search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"object\").that.is.not.empty;\n    pm.expect(jsonData.icons).to.be.an(\"array\").that.is.not.empty;\n    pm.expect(jsonData.icons[0]).to.have.property(\"term\").that.is.a(\"string\");\n    pm.expect(jsonData.icons[0]).to.have.property(\"preview_url\").that.is.a(\"string\");\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/dribble-apiEndpoint: /shotsMethod: GETParameters:query (optional): The search query for shots.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shots per page (default is 30 if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes shot search results.Generate postman testcases for the given test conditions as a code.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+                },
+                {
+                    "content": "pm.test(\"Response payload includes shot search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\n    jsonData.forEach(function(shot) {\n        pm.expect(shot).to.have.property(\"title\").that.is.a(\"string\");\n        pm.expect(shot).to.have.property(\"description\").that.is.a(\"string\");\n        pm.expect(shot).to.have.property(\"image_url\").that.is.a(\"string\");\n        pm.expect(shot).to.have.property(\"views_count\").that.is.a(\"number\");\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/rijksmuseum-apiEndpoint: /collectionMethod: GETParameters:q (optional): The search query for artworks.key (required): API key for authentication.format (optional): The format of the response (default is JSON if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes collection search results from the Rijksmuseum.Generate postman testcases for the given test conditions as a code.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+                },
+                {
+                    "content": "pm.test(\"Response payload includes collection search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"object\").that.is.not.empty;\n    pm.expect(jsonData.artworks).to.be.an(\"array\").that.is.not.empty;\n    jsonData.artworks.forEach(function(artwork) {\n        pm.expect(artwork).to.have.property(\"title\").that.is.a(\"string\");\n        pm.expect(artwork).to.have.property(\"artist\").that.is.a(\"string\");\n        pm.expect(artwork).to.have.property(\"image_url\").that.is.a(\"string\");\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/tv-maze-apiEndpoint: /showsMethod: GETParameters:q (optional): The search query for TV shows.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shows per page (default is 20 if not provided).Headers: NoneExpected Behavior:Responce Status Code 200 (OK)Response payload includes TV show search results.Generate postman testcases for the given test conditions as a code.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+                },
+                {
+                    "content": "pm.test(\"Response payload includes TV show search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\n    jsonData.forEach(function(show) {\n        pm.expect(show).to.have.property(\"name\").that.is.a(\"string\");\n        pm.expect(show).to.have.property(\"type\").that.is.a(\"string\");\n        pm.expect(show).to.have.property(\"language\").that.is.a(\"string\");\n    });\n});"
+                }
+            ]
+        },
+        {
+                "prompt": "API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers:Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Generate postman testcases for the given test conditions as a code.",
+                "testcases": [
+                    {
+                        "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+                    },
+                    {
+                        "content": "pm.test(\"Response payload includes the captured screenshot image\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/\");\n    pm.expect(pm.response.body).to.not.be.empty;\n});"
+                    }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/top-5-javascript-courses-to-learnEndpoint: /coursesMethod: GETParameters:NoneHeaders:NoneExpected Behavior:Response Status Code: 200 (OK)Response payload includes information about the top 5 JavaScript courses to learn.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response contains top 5 JavaScript courses\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property('courses').that.is.an('array').with.lengthOf(5);\n    pm.expect(jsonData.courses[0]).to.have.property('title').that.is.a('string');\n    pm.expect(jsonData.courses[0]).to.have.property('provider').that.is.a('string');\n    pm.expect(jsonData.courses[0]).to.have.property('url').that.is.a('string');\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/top-5-javascript-courses-to-learnEndpoint: /coursesMethod: GETParameters:NoneHeaders:NoneExpected Behavior:Response Status Code: 200 (OK)Response payload includes information about the top 5 JavaScript courses to learn.The response from the endpoint contains the 'Content-Type' header with the value 'application/json'.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response contains top 5 JavaScript courses\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property('courses').that.is.an('array').with.lengthOf(5);\n    pm.expect(jsonData.courses[0]).to.have.property('title').that.is.a('string');\n    pm.expect(jsonData.courses[0]).to.have.property('provider').that.is.a('string');\n    pm.expect(jsonData.courses[0]).to.have.property('url').that.is.a('string');\n});\n\npm.test(\"Content-Type header is 'application/json'\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: `https://api.publicapis.io/blog/top-5-javascript-courses-to-learn`Endpoint: `/courses`Method: GETParameters:NoneHeaders:NoneExpected Behavior:Response Status Code: 200 (OK)Response payload includes information about the top 5 JavaScript courses to learn.The response from the endpoint includes an array of JavaScript courses, each having 'name', 'provider', and 'url' properties.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response contains top 5 JavaScript courses\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an('array').with.lengthOf(5);\n\n    jsonData.forEach(function(course) {\n        pm.expect(course).to.have.property('name').that.is.a('string');\n        pm.expect(course).to.have.property('provider').that.is.a('string');\n        pm.expect(course).to.have.property('url').that.is.a('string');\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: `https://api.publicapis.io/blog/top-5-javascript-courses-to-learn`Endpoint: `/courses`Method: GETParameters:NoneHeaders:NoneExpected Behavior:Response Status Code: 200 (OK)Response time is less than 3000 milliseconds.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response time is less than 3000 milliseconds\", function () {\n    var responseTime = pm.response.responseTime;\n    pm.expect(responseTime).to.be.below(3000, \"Response time should be less than 3000 milliseconds\");\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/api2convert-apiEndpoint: /convertMethod: POSTParameters:input_format (required): The input file format.output_format (required): The desired output file format.file (required): Theinput file to convert.Headers:Content-Type: multipart/form-dataExpected Behavior:Response Status Code: 400 (Bad Request)Response payload includes details about the missing required parameters.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 400\", function () {\n    pm.response.to.have.status(400);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response contains details about missing required parameters\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property('message').that.is.a('string');\n    pm.expect(jsonData.message).to.include(\"input_format\", \"output_format\", \"file\");\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/api2convert-apiEndpoint: /convertMethod: POSTParameters: NoneHeaders:Content-Type: multipart/form-dataExpectedBehavior:Response Status Code: 200 (OK)Response payload includes geolocation information for the specified IP address, including country, region, city, latitude, and longitude.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property('country').that.is.a('string');\n    pm.expect(jsonData).to.have.property('region').that.is.a('string');\n    pm.expect(jsonData).to.have.property('city').that.is.a('string');\n    pm.expect(jsonData).to.have.property('latitude').that.is.a('number');\n    pm.expect(jsonData).to.have.property('longitude').that.is.a('number');\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/api2convert-apiEndpoint: /convertMethod: POSTParameters: NoneHeaders: NoneExpected Behavior:Response Status Code: 413 (Payload Too Large)Response payload includes a message indicating that the payload size exceeds the maximum limit.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 413\", function () {\n    pm.response.to.have.status(413);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response payload includes a message indicating payload size exceeds limit\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property('message').that.is.a('string');\n    pm.expect(jsonData.message).to.include(\"Payload size exceeds the maximum limit\");\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: `https://api.publicapis.io/ron-swanson-quotes-api`Endpoint: `/quotes/random`Method: GETParameters: NoneHeaders: NoneExpected Behavior:Response Status Code: 200 (OK)Response payload includes a random Ron Swanson quote.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response is JSON\", function () {\n    pm.response.to.be.json;\n});\n\npm.test(\"Response payload includes a random Ron Swanson quote\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property('quote').that.is.a('string');\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers: Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Task:",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes the captured screenshot image\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/\");\n    pm.expect(pm.response.text()).to.not.be.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers: Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Task: ",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes the captured screenshot image\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/\");\n    pm.expect(pm.response.text()).to.not.be.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers: Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Task: ",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes the captured screenshot image\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/\");\n    pm.expect(pm.response.text()).to.not.be.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers: Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Task: ",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes the captured screenshot image\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/\");\n    pm.expect(pm.response.text()).to.not.be.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/blog/screenshoot-api-with-pupeteerEndpoint: /screenshotMethod: POSTParameters:url (required): The URL of the webpage to capture a screenshot.width (optional): The width of the viewport for the screenshot (default is assumed if not provided).height (optional): The height of the viewport for the screenshot (default is assumed if not provided).fullPage (optional): Boolean value indicating whether to capture the full page screenshot or not (default is assumed if not provided).Headers: Content-Type: application/jsonExpected Behavior:Response Status Code 200 (OK)Response payload includes the captured screenshot image.Task: ",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes the captured screenshot image\", function () {\n    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"image/\");\n    pm.expect(pm.response.text()).to.not.be.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /geo-locationMethod: GETParameters:ip_address (required): The IP address for which to retrieve geolocation information.access_token (required): Access token for authentication with the geolocation service.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes geolocation information for the specified IP address.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes geolocation information\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"country\");\n    pm.expect(jsonData).to.have.property(\"region\");\n    pm.expect(jsonData).to.have.property(\"city\");\n    pm.expect(jsonData).to.have.property(\"latitude\");\n    pm.expect(jsonData).to.have.property(\"longitude\");\n });"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.example.comEndpoint: /travel-experiencesMethod: GETParameters:destination (required): The destination for which to retrieve travel experiences.category (optional): The category of experiences to filter (e.g., food, adventure, culture).max_price (optional): The maximum price range for experiences.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes travel experiences for the specified destination.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes travel experiences\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.be.an(\"array\").that.is.not.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/noun-project-apiEndpoint: /iconsMethod: GETParameters:term (required): The search term for icons.apiKey (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes icon search results.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes icon search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"icons\").that.is.an(\"array\").and.not.empty;\n    jsonData.icons.forEach(function(icon) {\n        pm.expect(icon).to.have.property(\"id\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"term\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"preview_url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"svg_url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"download_url\").that.is.a(\"string\").and.not.empty;\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/dribble-apiEndpoint: /shotsMethod: GETParameters:query (optional): The search query for shots.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shots per page (default is 30 if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes shot search results.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes shot search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"shots\").that.is.an(\"array\").and.not.empty;\n    jsonData.shots.forEach(function(shot) {\n        pm.expect(shot).to.have.property(\"id\").that.is.a(\"string\").and.not.empty;\n        pm.expect(shot).to.have.property(\"title\").that.is.a(\"string\").and.not.empty;\n        pm.expect(shot).to.have.property(\"description\").that.is.a(\"string\");\n        pm.expect(shot).to.have.property(\"image_url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(shot).to.have.property(\"views_count\").that.is.a(\"number\");\n        pm.expect(shot).to.have.property(\"likes_count\").that.is.a(\"number\");\n        pm.expect(shot).to.have.property(\"comments_count\").that.is.a(\"number\");\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/rijksmuseum-apiEndpoint: /collectionMethod: GETParameters:q (optional): The search query for artworks.key (required): API key for authentication.format (optional): The format of the response (default is JSON if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes collection search results from the Rijksmuseum.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes collection search results from the Rijksmuseum\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"artworks\").that.is.an(\"array\").and.not.empty;\n    jsonData.artworks.forEach(function(artwork) {\n        pm.expect(artwork).to.have.property(\"objectNumber\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"title\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"principalOrFirstMaker\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"webImage\").that.is.an(\"object\");\n        pm.expect(artwork.webImage).to.have.property(\"url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"longTitle\").that.is.a(\"string\").and.not.empty;\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/tv-maze-apiEndpoint: /showsMethod: GETParameters:q (optional): The search query for TV shows.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shows per page (default is 20 if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes TV show search results.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes TV show search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"shows\").that.is.an(\"array\").and.not.empty;\n    jsonData.shows.forEach(function(show) {\n        pm.expect(show).to.have.property(\"id\").that.is.a(\"number\");\n        pm.expect(show).to.have.property(\"name\").that.is.a(\"string\").and.not.empty;\n        pm.expect(show).to.have.property(\"type\").that.is.a(\"string\").and.not.empty;\n        pm.expect(show).to.have.property(\"language\").that.is.a(\"string\").and.not.empty;\n        pm.expect(show).to.have.property(\"genres\").that.is.an(\"array\");\n        pm.expect(show).to.have.property(\"status\").that.is.a(\"string\").and.not.empty;\n        pm.expect(show).to.have.property(\"officialSite\").that.is.a(\"string\");\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/ron-swanson-quoutes-apiEndpoint: /quotes/randomMethod: GETParameters: NoneHeaders: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes a random Ron Swanson quote.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes a Ron Swanson quote\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"quote\").that.is.a(\"string\").and.not.empty;\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/movie-db-apiEndpoint: /searchMethod: GETParameters:query (required): The search query for movies.api_key (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes movie search results.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes movie search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"results\").that.is.an(\"array\").and.not.empty;\n    jsonData.results.forEach(function(movie) {\n        pm.expect(movie).to.have.property(\"title\").that.is.a(\"string\").and.not.empty;\n        pm.expect(movie).to.have.property(\"release_date\").that.is.a(\"string\").and.not.empty;\n        pm.expect(movie).to.have.property(\"overview\").that.is.a(\"string\").and.not.empty;\n        pm.expect(movie).to.have.property(\"poster_path\").that.is.a(\"string\"); // Can be empty\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/noun-project-apiEndpoint: /iconsMethod: GETParameters:term (required): The search term for icons.apiKey (required): API key for authentication.Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes icon search results.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes icon search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"icons\").that.is.an(\"array\").and.not.empty;\n    jsonData.icons.forEach(function(icon) {\n        pm.expect(icon).to.have.property(\"id\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"term\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"preview_url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"svg_url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(icon).to.have.property(\"download_url\").that.is.a(\"string\").and.not.empty;\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/dribble-apiEndpoint: /shotsMethod: GETParameters:query (optional): The search query for shots.page (optional): The page number for pagination (default is 1 if not provided).per_page (optional): The number of shots per page (default is 30 if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes shot search results.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes shot search results\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"shots\").that.is.an(\"array\").and.not.empty;\n    jsonData.shots.forEach(function(shot) {\n        pm.expect(shot).to.have.property(\"id\").that.is.a(\"string\").and.not.empty;\n        pm.expect(shot).to.have.property(\"title\").that.is.a(\"string\").and.not.empty;\n        pm.expect(shot).to.have.property(\"description\").that.is.a(\"string\");\n        pm.expect(shot).to.have.property(\"image_url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(shot).to.have.property(\"views_count\").that.is.a(\"number\");\n        pm.expect(shot).to.have.property(\"likes_count\").that.is.a(\"number\");\n        pm.expect(shot).to.have.property(\"comments_count\").that.is.a(\"number\");\n    });\n});"
+                }
+            ]
+        },
+        {
+            "prompt": "API Details:Base URL: https://api.publicapis.io/rijksmuseum-apiEndpoint: /collectionMethod: GETParameters:q (optional): The search query for artworks.key (required): API key for authentication.format (optional): The format of the response (default is JSON if not provided).Headers: NoneExpected Behavior:Response Status Code 200 (OK)Response payload includes collection search results from the Rijksmuseum.",
+            "testcases": [
+                {
+                    "content": "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\npm.test(\"Response payload includes collection search results from the Rijksmuseum\", function () {\n    var jsonData = pm.response.json();\n    pm.expect(jsonData).to.have.property(\"artworks\").that.is.an(\"array\").and.not.empty;\n    jsonData.artworks.forEach(function(artwork) {\n        pm.expect(artwork).to.have.property(\"objectNumber\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"title\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"principalOrFirstMaker\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"webImage\").that.is.an(\"object\");\n        pm.expect(artwork.webImage).to.have.property(\"url\").that.is.a(\"string\").and.not.empty;\n        pm.expect(artwork).to.have.property(\"longTitle\").that.is.a(\"string\").and.not.empty;\n    });\n});"
+                }
+            ]
+        }
+        
+    
+    ]
+        
+                

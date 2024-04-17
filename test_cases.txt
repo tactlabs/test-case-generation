@@ -1,0 +1,322 @@
+User: API Details: - Base URL: https://api.openweathermap.org/data/2.5/ Endpoint 1:- Path: /weather - Method: GET - Parameters:   - delhi   - API key - Headers: None - Expected Behavior:   - Response Status Code 200 (OK)   - Response payload includes current weather information for the specified city. Generate postman testcases for the given test conditions as a code.
+Assistant: ```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    var jsonData = pm.response.json();
+    
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData.weather).to.be.an("array");
+    pm.expect(jsonData.weather[0]).to.have.property("main");
+    pm.expect(jsonData.weather[0]).to.have.property("description");
+});
+
+pm.test("Response contains weather information for specified city", function () {
+    var jsonData = pm.response.json();
+    
+    pm.expect(jsonData).to.have.property("name").and.to.equal("Delhi");
+});
+
+pm.test("Response contains API key", function () {
+    var jsonData = pm.response.json();
+    
+    pm.expect(jsonData).to.have.property("cod").and.to.equal(200);
+});
+```
+User: API Details: - Base URL: https://api.openweathermap.org/data/2.5/ Endpoint 1:- Path: /weather - Method: GET - Parameters:   - delhi   - API key - Headers: None - Expected Behavior:   - Response Status Code 200 (OK)   - Response payload includes current weather information for the specified city. Generate postman testcases for the given test conditions as a code.
+Assistant: ```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response should contain current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData.weather).to.be.an('array');
+    pm.expect(jsonData.weather[0]).to.have.property("main");
+    pm.expect(jsonData.weather[0]).to.have.property("description");
+});
+```
+```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload contains current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information for Delhi", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.equal("Delhi");
+    pm.expect(jsonData.main).to.have.property("temp");
+    pm.expect(jsonData.weather[0]).to.have.property("main");
+});
+```
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("City name is Delhi", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.eql("Delhi");
+});
+
+pm.test("Response payload includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.weather).to.be.an('array');
+    pm.expect(jsonData.main.temp).to.be.a('number');
+    pm.expect(jsonData.main.humidity).to.be.a('number');
+});
+```
+```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    var responseData = pm.response.json();
+    pm.expect(responseData).to.have.property("main");
+    pm.expect(responseData).to.have.property("weather");
+    pm.expect(responseData).to.have.property("wind");
+});
+```
+```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information for Delhi", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.eql("Delhi");
+    pm.expect(jsonData.main).to.have.property("temp");
+    pm.expect(jsonData.main).to.have.property("humidity");
+    pm.expect(jsonData.weather[0]).to.have.property("main");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information for Delhi", function () {
+    pm.expect(pm.response.json().name).to.eql("Delhi");
+    pm.expect(pm.response.json()).to.have.property("weather");
+});
+```
+```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    pm.expect(pm.response.json().main).to.have.property('temp');
+    pm.expect(pm.response.json()).to.have.property('weather');
+    pm.expect(pm.response.json()).to.have.property('wind');
+    pm.expect(pm.response.json()).to.have.property('clouds');
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```javascript
+// Test case 1: Verify response status code is 200
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Test case 2: Verify response payload includes current weather information
+pm.test("Response payload includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes weather information", function () {
+    pm.expect(pm.response.json().main).to.have.property("temp");
+    pm.expect(pm.response.json()).to.have.property("weather");
+    pm.expect(pm.response.json().weather[0]).to.have.property("main");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response contains weather information for Delhi", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.eql("Delhi");
+    pm.expect(jsonData.weather).to.exist;
+});
+
+pm.test("Response contains current weather data", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.main).to.exist;
+    pm.expect(jsonData.wind).to.exist;
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("coord");
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information for delhi", function () {
+    var responseData = pm.response.json();
+    pm.expect(responseData.name).to.equal("Delhi");
+    pm.expect(responseData.main.temp).to.be.a("number");
+    pm.expect(responseData.weather[0].description).to.be.a("string");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```
+pm.test("Response code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response contains weather information for Delhi", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.equal("Delhi");
+    pm.expect(jsonData.main).to.have.property("temp");
+    pm.expect(jsonData.main).to.have.property("humidity");
+    pm.expect(jsonData.weather[0]).to.have.property("main");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes current weather information", function () {
+    pm.expect(pm.response.json().name).to.equal("Delhi");
+    pm.expect(pm.response.json().main.temp).to.be.a('number');
+    pm.expect(pm.response.json().weather[0].description).to.be.a('string');
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response body includes current weather information", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property("weather");
+    pm.expect(jsonData).to.have.property("main");
+    pm.expect(jsonData).to.have.property("wind");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload is valid", function () {
+    pm.response.to.be.json;
+    pm.response.to.have.jsonBody("courses");
+    pm.expect(pm.response.json().courses).to.have.length(5);
+    pm.expect(pm.response.json().courses[0]).to.have.property("title");
+    pm.expect(pm.response.json().courses[0]).to.have.property("url");
+    pm.expect(pm.response.json().courses[0]).to.have.property("provider");
+});
+
+pm.test("Response includes top 5 JavaScript courses", function () {
+    var courses = pm.response.json().courses;
+    pm.expect(courses).to.have.length(5);
+    pm.expect(courses[0].title).to.equal("Course 1");
+    pm.expect(courses[1].title).to.equal("Course 2");
+    pm.expect(courses[2].title).to.equal("Course 3");
+    pm.expect(courses[3].title).to.equal("Course 4");
+    pm.expect(courses[4].title).to.equal("Course 5");
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response should include information about the top 5 JavaScript courses to learn", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.courses).to.be.an('array').and.to.have.lengthOf(5);
+});
+```
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response should contain icon search results", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property('icons');
+});
+```
+```javascript
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response payload includes icon search results", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.icons).to.be.an('array').that.is.not.empty;
+});
+```
