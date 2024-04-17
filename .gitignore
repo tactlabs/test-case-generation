@@ -140,3 +140,9 @@ venv/
 
 #ML 
 *.onnx
+
+#model
+testcase_generator_model.pth
+
+#prompts
+prompts.txt

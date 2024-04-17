@@ -320,3 +320,26 @@ pm.test("Response payload includes icon search results", function () {
     pm.expect(jsonData.icons).to.be.an('array').that.is.not.empty;
 });
 ```
+pm.test("Response status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response body is not empty", function () {
+    pm.response.to.not.be.oneOf([null, ""]);
+});
+
+pm.test("Response includes photos array", function () {
+    pm.expect(pm.response.json().photos).to.be.an('array');
+});
+
+pm.test("Response contains photo information", function () {
+    pm.expect(pm.response.json().photos[0]).to.have.property('id');
+});
+
+pm.test("Response contains valid photo url", function () {
+    pm.expect(pm.response.json().photos[0].img_src).to.match(/^https?:\/\//);
+});
+
+pm.test("Response contains valid camera information", function () {
+    pm.expect(pm.response.json().photos[0].camera).to.have.property('full_name');
+});

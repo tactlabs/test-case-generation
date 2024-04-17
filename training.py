@@ -1,3 +1,18 @@
+'''
+
+Created on: 15 April, 2024
+
+@author: S Deepika sri, Mohammed Aadil
+
+source:
+    https://www.codeunderscored.com/upload-download-files-flask/
+    https://stackoverflow.com/questions/62317723/tokens-to-words-mapping-in-the-tokenizer-decode-step-huggingface
+    https://pytorch.org/tutorials/beginner/introyt/trainingyt.html
+     
+
+'''
+
+
 import json
 import torch
 import openai 
@@ -114,6 +129,7 @@ def dump(message):
                 f.write(f"{reply}\n")
                 
             return reply
+            
 
 
 messages=[]
@@ -122,11 +138,12 @@ class MyGPT2Model(nn.Module):
         super(MyGPT2Model, self).__init__()
         self.gpt2 = GPT2LMHeadModel.from_pretrained('gpt2')
 
-    def forward(self, input_ids, prompt_text):
+    def forward(self, input_ids, prompt_text,n):
         
         while True:
             outputs = self.gpt2(input_ids)
             if prompt_text:
+                prompt_text+="Generate "+n+"  postman testcases for the given endpoint as code! so, that i can use it directly in postman in this format: "+dataset[0]['testcase'][0]['content']+"without any explaination or extra text or numbering"
                 user_message = {"role": "user", "content": prompt_text}
                 messages.append(user_message)
                 chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[user_message])

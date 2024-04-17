@@ -1,0 +1,87 @@
+{
+  "info": {
+    "name": "Generated Test Cases",
+    "description": "Test cases generated from the provided endpoint",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Test Case 1",
+      "request": {
+        "method": "POST",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=2kMSgESLKxbpMKgm3piy61AznbUV7QZbtRafmMY4&sol=0",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "pm.test(\"Response status code is 200\", function () {\n    pm.response.to.have.status(200);\n});"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Case 2",
+      "request": {
+        "method": "POST",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=2kMSgESLKxbpMKgm3piy61AznbUV7QZbtRafmMY4&sol=0",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "pm.test(\"Response body is not empty\", function () {\n    pm.response.to.not.be.oneOf([null, \"\"]);\n});"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Case 3",
+      "request": {
+        "method": "POST",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=2kMSgESLKxbpMKgm3piy61AznbUV7QZbtRafmMY4&sol=0",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "pm.test(\"Response includes photos array\", function () {\n    pm.expect(pm.response.json().photos).to.be.an('array');\n});"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Case 4",
+      "request": {
+        "method": "POST",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=2kMSgESLKxbpMKgm3piy61AznbUV7QZbtRafmMY4&sol=0",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "pm.test(\"Response contains photo information\", function () {\n    pm.expect(pm.response.json().photos[0]).to.have.property('id');\n});"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Case 5",
+      "request": {
+        "method": "POST",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=2kMSgESLKxbpMKgm3piy61AznbUV7QZbtRafmMY4&sol=0",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "pm.test(\"Response contains valid photo url\", function () {\n    pm.expect(pm.response.json().photos[0].img_src).to.match(/^https?:\\/\\//);\n});"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Case 6",
+      "request": {
+        "method": "POST",
+        "url": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=2kMSgESLKxbpMKgm3piy61AznbUV7QZbtRafmMY4&sol=0",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "pm.test(\"Response contains valid camera information\", function () {\n    pm.expect(pm.response.json().photos[0].camera).to.have.property('full_name');\n});"
+        }
+      },
+      "response": []
+    }
+  ]
+}
